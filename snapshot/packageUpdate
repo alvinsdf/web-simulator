@@ -1,9 +1,10 @@
-rm -f WebSimulator.*
+CURRENT_DATE=`date +%d%m%y`
+rm -f web-simulator-*.*
 rm -rf web
 cp -r ../pkg/web .
 cp ../README.md .
 cp ../LICENSE .
-zip -qr WebSimulator.zip web/ simulator.bat tizen-sdk-wrt-options.txt README.md LICENSE
-tar cfa WebSimulator.tgz web/ simulator.sh tizen-sdk-wrt-options.txt README.md LICENSE
+zip -qr web-simulator-$CURRENT_DATE.zip web/ simulator.bat tizen-sdk-wrt-options.txt README.md LICENSE
+tar cfa web-simulator-$CURRENT_DATE.tar.gz web/ simulator.sh tizen-sdk-wrt-options.txt README.md LICENSE
 
-md5sum WebSimulator.*
+md5sum web-simulator-$CURRENT_DATE.*
