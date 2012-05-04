@@ -1,0 +1,9 @@
+rm -f WebSimulator.*
+rm -rf web
+cp -r ../pkg/web .
+cp ../README.md .
+cp ../LICENSE .
+zip -qr WebSimulator.zip web/ simulator.bat tizen-sdk-wrt-options.txt README.md LICENSE
+tar cfa WebSimulator.tgz web/ simulator.sh tizen-sdk-wrt-options.txt README.md LICENSE
+
+md5sum WebSimulator.*
